@@ -3,4 +3,4 @@
 just a test file....
 */
 
-{ "testing server options now...".postln; } ! 10;
+{ "testing server options script...".postln; } ! 1;

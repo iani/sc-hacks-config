@@ -1,0 +1,1 @@
+{ WhiteNoise.ar(0.3).dup }.play;
