@@ -1,0 +1,26 @@
+
+{
+	var testsynth;
+	testsynth = { | freq = 0.5 |
+		SinOsc.ar(LinLin.ar(freq, 0.47, 0.53, 100, 5000), 0, 0.3).dup;
+	}.play;
+	testsynth.onStart({
+		testsynth.map(\freq, \x1.bus.index);
+	})
+//:
+{
+	var testsynth;
+	testsynth = {
+		SinOsc.ar(LinLin.ar(
+			In.kr(\x1.bus.index),
+			0.47, 0.53, 100, 5000), 0, 0.3).dup;
+	}.play;
+};// .value;
+//:
+/*
+Library.put(\test, {
+	SinOsc.ar(LinLin.ar(\x1.bkr, 0.47, 0.53, 100, 5000), 0, 0.3).dup;
+}.play
+);
+*/
+{ SinOsc.ar(LinLin.ar(\x1.bkr, 0.47, 0.53, 100, 5000), 0, 0.3).dup; } +> \test;
