@@ -1,0 +1,13 @@
+#+TITLE: Sensestage
+** Pydoncli
+:PROPERTIES:
+:DATE_DONE: [2021-09-04 Sat 15:04]
+:END:
+
+This is the command:
+
+#+begin_center sh
+sudo pydoncli.py -P osc -c newconfig_2019_Dec_13_13-28-37.xml -s /dev/ttyUSB0
+#+end_center
+
+It must be run from the same directory as the .xml config file is located.
