@@ -16,5 +16,4 @@ OSCFunc({ | msg |
 	//	postf("received from sensor %, data: %\n", index, axisdata);
 
 }, '/minibee/data').fix;
-}.value;
 //:
