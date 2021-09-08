@@ -1,13 +1,25 @@
 #+TITLE: Sensestage
-** Pydoncli
+* pydongui
+
+Run pydongui as sudo.
+Preferably run it from the path that contains the configuration file that you want to use.
+
+Set the UDP port number to 57120.
+Set the
+
+
+* Pydoncli
 :PROPERTIES:
 :DATE_DONE: [2021-09-04 Sat 15:04]
 :END:
 
-This is the command:
+Pydoncli is the command line interface (CLI) for running pydon. This is not recommended for the ide-fantasy project, because it does not allow one to check the port number and the osc command where the data are sent.
+
+One can run pydon using the command line interface (CLI), by entering the command given below on a shell terminal.
+
+It must be run from the same directory as the .xml config file is located.
+The command is:
 
 #+begin_center sh
 sudo pydoncli.py -P osc -c newconfig_2019_Dec_13_13-28-37.xml -s /dev/ttyUSB0
 #+end_center
-
-It must be run from the same directory as the .xml config file is located.
