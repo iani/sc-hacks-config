@@ -1,6 +1,6 @@
 postf("Buffers for project % are:\n", Config.projectName);
 Config.bufferNames.postln;
-\projectbuffers.br_.window.v(
+\projectbuffers.br_(height: 800).window.v(
 	ListView()
 	.font_(Font("Helvetica", 24))
 	.items_(Config.bufferNames)
