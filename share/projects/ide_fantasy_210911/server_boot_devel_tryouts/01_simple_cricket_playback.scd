@@ -1,8 +1,3 @@
-// \sapporo1x.bus.get;
-\sapporo1x.index;
-//:
-\crickets.bufnum;
-
 //:
 //: a useable sound w xyz control + settable buffers
 {
