@@ -67910,3 +67910,1044 @@ minibee 1 is configured
 --------------------------------
 
 
+no data for 60 seconds, opening serial port again
+
+
+serial port is closed, trying to open serial port again
+
+
+trying to open serial port
+
+
+('Opening serial port', '/dev/ttyUSB0', True)
+
+
+serial port is open again
+
+
+initialising communication through serial port
+
+
+querying settings
+
+
+setting coordinator settings
+
+
+querying settings
+
+
+--------------------------------
+
+
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+('XBEE setting changed', 'CE')
+
+
+('XBEE setting changed', 'AP')
+
+
+('XBEE setting changed', 'MY')
+
+
+('XBEE setting changed', 'DH')
+
+
+('XBEE setting changed', 'DL')
+
+
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+no data for 60 seconds, opening serial port again
+
+
+serial port is closed, trying to open serial port again
+
+
+trying to open serial port
+
+
+('Opening serial port', '/dev/ttyUSB0', True)
+
+
+serial port is open again
+
+
+initialising communication through serial port
+
+
+querying settings
+
+
+setting coordinator settings
+
+
+querying settings
+
+
+--------------------------------
+
+
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+('XBEE setting changed', 'CE')
+
+
+('XBEE setting changed', 'AP')
+
+
+('XBEE setting changed', 'MY')
+
+
+('XBEE setting changed', 'DH')
+
+
+('XBEE setting changed', 'DL')
+
+
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+no data for 60 seconds, opening serial port again
+
+
+serial port is closed, trying to open serial port again
+
+
+trying to open serial port
+
+
+('Opening serial port', '/dev/ttyUSB0', True)
+
+
+serial port is open again
+
+
+initialising communication through serial port
+
+
+querying settings
+
+
+setting coordinator settings
+
+
+querying settings
+
+
+--------------------------------
+
+
+ 
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+('XBEE setting changed', 'CE')
+
+
+('XBEE setting changed', 'AP')
+
+
+('XBEE setting changed', 'MY')
+
+
+('XBEE setting changed', 'DH')
+
+
+('XBEE setting changed', 'DL')
+
+
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+Sending config message for MiniBee 1, revision F, firmware 10
+
+
+Configuration:
+ 
+{'A5': 'TWIClock', 'A4': 'TWIData'}
+
+
+Sending config message for MiniBee 1, revision F, firmware 10
+
+
+Configuration:
+ 
+{'A5': 'TWIClock', 'A4': 'TWIData'}
+
+
+Sending config message for MiniBee 1, revision F, firmware 10
+
+
+Configuration:
+ 
+{'A5': 'TWIClock', 'A4': 'TWIData'}
+
+
+Sending config message for MiniBee 1, revision F, firmware 10
+
+
+Configuration:
+ 
+{'A5': 'TWIClock', 'A4': 'TWIData'}
+
+
+('confirmconfig', [1, 0, 50, 6, 0, 0, 0])
+
+
+minibee 1 is configured
+
+
+--------------------------------
+
+
+no data for 60 seconds, opening serial port again
+
+
+serial port is closed, trying to open serial port again
+
+
+trying to open serial port
+
+
+('Opening serial port', '/dev/ttyUSB0', True)
+
+
+serial port is open again
+
+
+initialising communication through serial port
+
+
+querying settings
+
+
+setting coordinator settings
+
+
+querying settings
+
+
+--------------------------------
+
+
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+('XBEE setting changed', 'CE')
+
+
+('XBEE setting changed', 'AP')
+
+
+('XBEE setting changed', 'MY')
+
+
+('XBEE setting changed', 'DH')
+
+
+('XBEE setting changed', 'DL')
+
+
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+no data for 60 seconds, opening serial port again
+
+
+serial port is closed, trying to open serial port again
+
+
+trying to open serial port
+
+
+('Opening serial port', '/dev/ttyUSB0', True)
+
+
+serial port is open again
+
+
+initialising communication through serial port
+
+
+querying settings
+
+
+setting coordinator settings
+
+
+querying settings
+
+
+--------------------------------
+
+
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+('XBEE setting changed', 'CE')
+
+
+('XBEE setting changed', 'AP')
+
+
+('XBEE setting changed', 'MY')
+
+
+('XBEE setting changed', 'DH')
+
+
+('XBEE setting changed', 'DL')
+
+
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+no data for 60 seconds, opening serial port again
+
+
+serial port is closed, trying to open serial port again
+
+
+trying to open serial port
+
+
+('Opening serial port', '/dev/ttyUSB0', True)
+
+
+serial port is open again
+
+
+initialising communication through serial port
+
+
+querying settings
+
+
+setting coordinator settings
+
+
+querying settings
+
+
+--------------------------------
+('XBEE setting: channel', '\x0e')
+
+
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+('XBEE setting changed', 'CE')
+
+
+('XBEE setting changed', 'AP')
+
+
+('XBEE setting changed', 'MY')
+
+
+('XBEE setting changed', 'DH')
+
+
+('XBEE setting changed', 'DL')
+
+
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+no data for 60 seconds, opening serial port again
+
+
+serial port is closed, trying to open serial port again
+
+
+trying to open serial port
+
+
+('Opening serial port', '/dev/ttyUSB0', True)
+
+
+serial port is open again
+
+
+initialising communication through serial port
+
+
+querying settings
+
+
+setting coordinator settings
+
+
+querying settings
+
+
+--------------------------------
+
+
+ 
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+('XBEE setting changed', 'CE')
+
+
+('XBEE setting changed', 'AP')
+
+
+('XBEE setting changed', 'MY')
+
+
+('XBEE setting changed', 'DH')
+
+
+('XBEE setting changed', 'DL')
+
+
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+no data for 60 seconds, opening serial port again
+
+
+serial port is closed, trying to open serial port again
+
+
+trying to open serial port
+
+
+('Opening serial port', '/dev/ttyUSB0', True)
+
+
+serial port is open again
+
+
+initialising communication through serial port
+
+
+querying settings
+
+
+setting coordinator settings
+
+
+querying settings
+
+
+--------------------------------
+
+
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+('XBEE setting changed', 'CE')
+
+
+('XBEE setting changed', 'AP')
+
+
+('XBEE setting changed', 'MY')
+
+
+('XBEE setting changed', 'DH')
+
+
+('XBEE setting changed', 'DL')
+
+
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+no data for 60 seconds, opening serial port again
+
+
+serial port is closed, trying to open serial port again
+
+
+trying to open serial port
+
+
+('Opening serial port', '/dev/ttyUSB0', True)
+
+
+serial port is open again
+
+
+initialising communication through serial port
+
+
+querying settings
+
+
+setting coordinator settings
+
+
+querying settings
+
+
+--------------------------------
+
+
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+('XBEE setting changed', 'CE')
+
+
+('XBEE setting changed', 'AP')
+
+
+('XBEE setting changed', 'MY')
+
+
+('XBEE setting changed', 'DH')
+
+
+('XBEE setting changed', 'DL')
+
+
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+no data for 60 seconds, opening serial port again
+
+
+serial port is closed, trying to open serial port again
+
+
+trying to open serial port
+
+
+('Opening serial port', '/dev/ttyUSB0', True)
+
+
+serial port is open again
+
+
+initialising communication through serial port
+
+
+querying settings
+
+
+setting coordinator settings
+
+
+querying settings
+
+
+--------------------------------
+('XBEE setting: channel', '\x0e')
+
+
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+('XBEE setting changed', 'CE')
+
+
+('XBEE setting changed', 'AP')
+
+
+('XBEE setting changed', 'MY')
+
+
+('XBEE setting changed', 'DH')
+
+
+('XBEE setting changed', 'DL')
+
+
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+Sending config message for MiniBee 1, revision F, firmware 10
+
+
+Configuration:
+ 
+{'A5': 'TWIClock', 'A4': 'TWIData'}
+
+
+Sending config message for MiniBee 1, revision F, firmware 10
+
+
+Configuration:
+ 
+{'A5': 'TWIClock', 'A4': 'TWIData'}
+
+
+Sending config message for MiniBee 1, revision F, firmware 10
+
+
+Configuration:
+ 
+{'A5': 'TWIClock', 'A4': 'TWIData'}
+
+
+Sending config message for MiniBee 1, revision F, firmware 10
+
+
+Configuration:
+ 
+{'A5': 'TWIClock', 'A4': 'TWIData'}
+
+
+('confirmconfig', [1, 0, 50, 6, 0, 0, 0])
+
+
+minibee 1 is configured
+
+
+--------------------------------
+
+
+no data for 60 seconds, opening serial port again
+
+
+serial port is closed, trying to open serial port again
+
+
+trying to open serial port
+
+
+('Opening serial port', '/dev/ttyUSB0', True)
+
+
+serial port is open again
+
+
+initialising communication through serial port
+
+
+querying settings
+
+
+setting coordinator settings
+
+
+querying settings
+
+
+--------------------------------
+
+
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
+('XBEE setting changed', 'CE')
+
+
+('XBEE setting changed', 'AP')
+
+
+('XBEE setting changed', 'MY')
+
+
+('XBEE setting changed', 'DH')
+
+
+('XBEE setting changed', 'DL')
+
+
+('XBEE setting: channel', '\x0e')
+
+
+('XBEE setting: panid', ' !')
+
+
+('XBEE setting: coordinator enable', '\x01')
+
+
+('XBEE setting: api mode', '\x02')
+
+
+('XBEE setting: my address', '\x00\x00')
+
+
+('XBEE setting: destination high address', '\x00\x00\x00\x00')
+
+
+('XBEE setting: destination low address', '\x00\x00\xff\xfa')
+
+
