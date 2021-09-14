@@ -3,3 +3,4 @@ audiofiles/*.WAV
 audiofiles/*.aif
 audiofiles/*.aiff
 audiofiles/*
+*.log
