@@ -23,38 +23,43 @@
 	var amp, src, buf;
 	buf = \buf.kr(\melodic_road.bufnum);
 	src = PlayBuf.ar(1, buf,
-		In.kr(\sapporo2x.index),
+		Lag.kr(
+			LinLin.kr(In.kr(\sapporo1z.index), 0.3, 1.2), 1.0),
 		1, 0, 1, 2
 	);
-	Pan2.ar(src, \sapporo2y.in - 0.5 * 2, \sapporo1z.in);
+	Pan2.ar(src, \sapporo2x.in - 0.5 * 2,
+		Lag.kr(\sapporo2z.in, 1.0));
 } +> \sapporo;
 //==================================================
 //: select buffer from sensor input
 {
 	var amp, src;
 	src = PlayBuf.ar(1,
-		LinLin.kr(In.kr(\sapporo1x.index), 0, 1, 0, 10).round(1),
+		Lag.kr(LinLin.kr(In.kr(\sapporo1z.index), 0, 1, 0, 10).round(1),
+			1.0),
 		1, 0, 1, 2
 	);
-	Pan2.ar(src, \sapporo2y.in - 0.5 * 2, \sapporo2x.in);
+	Pan2.ar(src, \sapporo2x.in - 0.5 * 2, \sapporo2z.in);
 } +> \sapporo;
 //==================================================
-//:
+//:Granulation early version
 {
 	var amp, src, buf;
 	buf = \buf.kr(\crickets.bufnum);
 	src = GrainBuf.ar(
 		numChannels: 2,
-		dur: 1.5,
+		dur: 0.5,
 		trigger: Impulse.kr(
-			LinLin.kr(\sapporo1x.in, 0.2, 0.7, 2, 10)
+			LinLin.kr(\sapporo1z.in, 0.2, 0.7, 5, 10)
 		),
 		sndbuf: buf,
-		rate: LinLin.kr(\sapporo1y.in, 0.2, 0.7, 0.5, 1.5),
-		pos: LinLin.kr(\sapporo1z.in, 0.2, 0.7, 0.0, 1.0),
+		rate: LinLin.kr(\sapporo2y.in, 0.2, 0.7, 0.5, 1.5),
+		pos: LinLin.kr(\sapporo2z.in, 0.2, 0.7, 0.0, 1.0),
 		interp: 2,
 		pan: 0,
-		envbufnum: -1, maxGrains: 512, mul: 1, add: 0
+		envbufnum: -1, maxGrains: 512, mul:
+		LinLin.kr(\sapporo2x.in, 0.0, 0.9, 0.0, 0.1),
+		add: 0
 	);
 } +> \sapporo
 //==================================================
@@ -69,10 +74,12 @@
 	);
     chain = FFT(LocalBuf(2048), in);
     chain = PV_BrickWall.new(chain,
-		Lag.kr(LinLin.kr(\sapporo1x.in, 0, 1, -0.99, 0.6), 0.5)
+		Lag.kr(LinLin.kr(\sapporo1z.in, 0, 1, -0.99, 0.9), 1.0)
 	);
     Pan2.ar(IFFT(chain),
-		LinLin.kr(\sapporo1y.in, 0, 1, -1.0, 1.0)
+		LinLin.kr(\sapporo2x.in, 0, 1, -1.0, 1.0),
+		LinLin.kr(\sapporo2z.in, 0, 1, -1.0, 1.0)
+
 	);
 	//	Pan2.ar(src, \sapporo1y.in - 0.5, \sapporo1z.in - 0.3);
 } +> \sapporo
@@ -88,10 +95,11 @@
 	);
     chain = FFT(LocalBuf(2048), in);
     chain = PV_MagAbove(chain,
-		Lag.kr(LinLin.kr(\sapporo1x.in, 0, 1, 0, 15), 0.5)
+		Lag.kr(LinLin.kr(\sapporo1z.in, 0, 1, 0, 15), 0.5),
 	);
     Pan2.ar(IFFT(chain),
-		LinLin.kr(\sapporo1y.in, 0, 1, -1.0, 1.0)
+		LinLin.kr(\sapporo1x.in, 0, 1, -1.0, 1.0),
+		Lag.kr(LinLin.kr(\sapporo2z.in, 0, 1, 0, 1), 0.5)
 	);
 	//	Pan2.ar(src, \sapporo1y.in - 0.5, \sapporo1z.in - 0.3);
 } +> \sapporo
@@ -108,7 +116,7 @@
 	);
     chain = FFT(LocalBuf(2048), in);
     chain = PV_MagBelow(chain,
-		Lag.kr(LinLin.kr(\sapporo1x.in, 0, 1, 0, 20), 0.5)
+		Lag.kr(LinLin.kr(\sapporo1z.in, 0, 1, 0, 20), 0.5)
 	);
     Pan2.ar(IFFT(chain),
 		Lag.kr(LinLin.kr(\sapporo2y.in, 0, 1, -1.0, 1.0), 1.0),
@@ -117,7 +125,7 @@
 	//	Pan2.ar(src, \sapporo1y.in - 0.5, \sapporo1z.in - 0.3);
 } +> \sapporo
 //==================================================
-//:
+//: BINSHIFT
 {
 	var buf, in, chain;
 	buf = \buf.kr(\melodic_road.bufnum);
@@ -135,12 +143,14 @@
 		// Lag.kr(LinLin.kr(\sapporo1x.in, 0, 1, 0, 10), 0.5)
 	);
     Pan2.ar(IFFT(chain),
-		LinLin.kr(\sapporo1y.in, 0, 1, -1.0, 1.0)
+		LinLin.kr(\sapporo2y.in, 0, 1, -1.0, 1.0),
+		LinLin.kr(\sapporo2z.in, 0, 1,  0.0, 1.0),
+
 	);
 	//	Pan2.ar(src, \pporo1y.in - 0.5, \sapporo1z.in - 0.3);
 } +> \sapporo
 
-//:
+//: MAGSHIFT
 {
 	var buf, in, chain;
 	buf = \buf.kr(\melodic_road.bufnum);
