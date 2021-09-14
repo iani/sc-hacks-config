@@ -76,3 +76,24 @@ window.addNotifier(IdeFantasy, '/sapporo', { | n, id ... nums |
 		};
 	}.defer;
 });
+// WE CAN USE THE SAME CODE FOR '/corfu',
+// as the id numbers take care of accessing the right elements
+//
+window.addNotifier(IdeFantasy, '/corfu', { | n, id ... nums |
+	// TODO: Add project gui button to open/close this window
+	var sliders, numboxes, busses;
+	id = id - 1;
+	sliders = allsliders[id];
+	numboxes = allnums[id];
+	busses = allbusses[id];
+	{
+		nums do: { | val, i |
+			val = spec.unmap(val);
+			numboxes[i].value_(val);
+			sliders[i].value_(val);
+			// TODO: set busses separately with Bus.addNotifier(...)
+			// So they continue to work when window is closed
+			busses[i].set(val);
+		};
+	}.defer;
+});
