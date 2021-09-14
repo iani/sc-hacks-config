@@ -5,7 +5,7 @@
 //: a useable sound w xyz control + settable buffers
 {
 	var amp, src, buf;
-	buf = \buf.kr(\melodic_road.bufnum);
+	buf = \buf.kr(\crickets.bufnum);
 	src = PlayBuf.ar(1, buf,
 		LinLin.kr(
 			//	Lag.kr(\sapporo1x.in, 1.0),
@@ -21,7 +21,7 @@
 //: VARIANT USING Z FOR AMP CONTROL
 {
 	var amp, src, buf;
-	buf = \buf.kr(\melodic_road.bufnum);
+	buf = \buf.kr(\crickets.bufnum);
 	src = PlayBuf.ar(1, buf,
 		Lag.kr(
 			LinLin.kr(In.kr(\sapporo1z.index), 0.3, 1.2), 1.0),
@@ -66,7 +66,7 @@
 //: BRICKWALL
 {
 	var buf, in, chain;
-	buf = \buf.kr(\melodic_road.bufnum);
+	buf = \buf.kr(\crickets.bufnum);
 	in = PlayBuf.ar(1, buf,
 		// Lag.kr(\sapporo1y.in, 0.5),
 		1,
@@ -87,7 +87,7 @@
 //: MAGABOVE
 {
 	var buf, in, chain;
-	buf = \buf.kr(\melodic_road.bufnum);
+	buf = \buf.kr(\crickets.bufnum);
 	in = PlayBuf.ar(1, buf,
 		// Lag.kr(\sapporo1y.in, 0.5),
 		1,
@@ -108,7 +108,7 @@
 //: MAGBELOW
 {
 	var buf, in, chain;
-	buf = \buf.kr(\melodic_road.bufnum);
+	buf = \buf.kr(\crickets.bufnum);
 	in = PlayBuf.ar(1, buf,
 		// Lag.kr(\sapporo1y.in, 0.5),
 		1,
@@ -128,7 +128,7 @@
 //: BINSHIFT
 {
 	var buf, in, chain;
-	buf = \buf.kr(\melodic_road.bufnum);
+	buf = \buf.kr(\crickets.bufnum);
 	in = PlayBuf.ar(1, buf,
 		// Lag.kr(\sapporo1y.in, 0.5),
 		1,
@@ -153,7 +153,7 @@
 //: MAGSHIFT
 {
 	var buf, in, chain;
-	buf = \buf.kr(\melodic_road.bufnum);
+	buf = \buf.kr(\crickets.bufnum);
 	in = PlayBuf.ar(1, buf,
 		// Lag.kr(\sapporo1y.in, 0.5),
 		1,

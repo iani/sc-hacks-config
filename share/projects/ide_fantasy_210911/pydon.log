@@ -77559,3 +77559,30 @@ querying settings
 ('XBEE setting: destination low address', '\x00\x00\xff\xfa')
 
 
+Waiting for Server-thread to finish
+
+
+no data for 60 seconds, opening serial port again
+
+
+serial port is closed, trying to open serial port again
+
+
+trying to open serial port
+
+
+('Opening serial port', '/dev/ttyUSB0', True)
+
+
+Done; goodbye
+
+
+exiting hive loop
+
+
+serial port was not opened
+
+
+('hive loop not running anymore', False)
+
+
