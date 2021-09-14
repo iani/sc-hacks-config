@@ -59,6 +59,7 @@ window.v(
 spec = [0.47, 0.54].asSpec;
 
 window.addNotifier(IdeFantasy, '/sapporo', { | n, id ... nums |
+	// TODO: Add project gui button to open/close this window
 	var sliders, numboxes, busses;
 	id = id - 1;
 	sliders = allsliders[id];
@@ -69,6 +70,8 @@ window.addNotifier(IdeFantasy, '/sapporo', { | n, id ... nums |
 			val = spec.unmap(val);
 			numboxes[i].value_(val);
 			sliders[i].value_(val);
+			// TODO: set busses separately with Bus.addNotifier(...)
+			// So they continue to work when window is closed
 			busses[i].set(val);
 		};
 	}.defer;
