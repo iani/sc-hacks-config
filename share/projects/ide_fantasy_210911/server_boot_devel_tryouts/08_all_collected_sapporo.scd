@@ -11,7 +11,7 @@
 		1, 0, 1, 2
 	);
 	Pan2.ar(src, \sapporo2y.in - 0.5 * 2, \sapporo2x.in);
-} +> \saporo;
+} +> \sapporo;
 //==================================================
 //: VARIANT USING Z FOR AMP CONTROL
 {
@@ -22,7 +22,7 @@
 		1, 0, 1, 2
 	);
 	Pan2.ar(src, \sapporo2y.in - 0.5 * 2, \sapporo1z.in);
-} +> \saporo;
+} +> \sapporo;
 //==================================================
 //: select buffer from sensor input
 {
@@ -32,7 +32,7 @@
 		1, 0, 1, 2
 	);
 	Pan2.ar(src, \sapporo2y.in - 0.5 * 2, \sapporo2x.in);
-} +> \saporo;
+} +> \sapporo;
 //==================================================
 //:
 {
@@ -51,7 +51,7 @@
 		pan: 0,
 		envbufnum: -1, maxGrains: 512, mul: 1, add: 0
 	);
-} +> \saporo
+} +> \sapporo
 //==================================================
 //: BRICKWALL
 {
@@ -70,7 +70,7 @@
 		LinLin.kr(\sapporo1y.in, 0, 1, -1.0, 1.0)
 	);
 	//	Pan2.ar(src, \sapporo1y.in - 0.5, \sapporo1z.in - 0.3);
-} +> \saporo
+} +> \sapporo
 //==================================================
 //: MAGABOVE
 {
@@ -89,7 +89,7 @@
 		LinLin.kr(\sapporo1y.in, 0, 1, -1.0, 1.0)
 	);
 	//	Pan2.ar(src, \sapporo1y.in - 0.5, \sapporo1z.in - 0.3);
-} +> \saporo
+} +> \sapporo
 //:
 //==================================================
 //: MAGBELOW
@@ -109,7 +109,7 @@
 		LinLin.kr(\sapporo1y.in, 0, 1, -1.0, 1.0)
 	);
 	//	Pan2.ar(src, \sapporo1y.in - 0.5, \sapporo1z.in - 0.3);
-} +> \saporo
+} +> \sapporo
 //==================================================
 //:
 {
@@ -132,7 +132,7 @@
 		LinLin.kr(\sapporo1y.in, 0, 1, -1.0, 1.0)
 	);
 	//	Pan2.ar(src, \pporo1y.in - 0.5, \sapporo1z.in - 0.3);
-} +> \saporo
+} +> \sapporo
 
 //:
 {
@@ -155,6 +155,6 @@
 		LinLin.kr(\sapporo1y.in, 0, 1, -1.0, 1.0)
 	);
 	//	Pan2.ar(src, \pporo1y.in - 0.5, \sapporo1z.in - 0.3);
-} +> \saporo
+} +> \sapporo
 
 //:
