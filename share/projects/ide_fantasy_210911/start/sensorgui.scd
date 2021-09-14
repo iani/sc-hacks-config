@@ -6,6 +6,7 @@ var corfu, sapporo, allsensors, font, window;
 var sapporo1sliders, sapporo2sliders, sapporo1nums, sapporo2nums;
 var corfu3sliders, corfu4sliders, corfu3nums, corfu4nums;
 var allsliders, allnums, allbusses;
+var spec;
 // var sapporosliders, sapporonums, corfusliders, corfunums;
 
 sapporo1sliders = { Slider().orientation_(\horizontal) } ! 3;
@@ -50,22 +51,22 @@ window.v(
 			.minWidth_(120),
 			allsliders.flat[i],
 			allnums.flat[i]
-			// Slider().orientation_(\horizontal),
-			// NumberBox().maxWidth_(120).font_(font)
 		)
 	})
 );
 { window.bounds = Rect(0, 0, 800, 500); }.defer(0.1);
+
+spec = [0.47, 0.54].asSpec;
+
 window.addNotifier(IdeFantasy, '/sapporo', { | n, id ... nums |
 	var sliders, numboxes, busses;
 	id = id - 1;
 	sliders = allsliders[id];
 	numboxes = allnums[id];
 	busses = allbusses[id];
-	//	allbusses[id].postln;
-	// busses[0].postln;
 	{
 		nums do: { | val, i |
+			val = spec.unmap(val);
 			numboxes[i].value_(val);
 			sliders[i].value_(val);
 			busses[i].set(val);
