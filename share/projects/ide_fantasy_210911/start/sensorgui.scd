@@ -82,7 +82,7 @@ window.addNotifier(IdeFantasy, '/sapporo', { | n, id ... nums |
 window.addNotifier(IdeFantasy, '/corfu', { | n, id ... nums |
 	// TODO: Add project gui button to open/close this window
 	var sliders, numboxes, busses;
-	id = id - 1;
+	id = id + 1;
 	sliders = allsliders[id];
 	numboxes = allnums[id];
 	busses = allbusses[id];
