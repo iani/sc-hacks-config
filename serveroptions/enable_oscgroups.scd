@@ -1,3 +1,3 @@
-// IdeFantasy.gui;
+IdeFantasy.gui;
 
 OscGroups.enable;
