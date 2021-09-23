@@ -72,6 +72,7 @@ window.addNotifier(IdeFantasy, '/corfu', { | n, id ... nums |
 			// TODO: set busses separately with Bus.addNotifier(...)
 			// So they continue to work when window is closed
 			busses[i].set(val);
+			// test
 		};
 	}.defer;
 });
