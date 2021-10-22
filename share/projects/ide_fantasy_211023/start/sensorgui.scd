@@ -38,7 +38,7 @@ athens4nums = { NumberBox().font_(font).maxWidth_(120) } ! 3;
 allsliders = [athens1sliders, athens2sliders, corfu3sliders, corfu4sliders];
 allnums = [athens1nums, athens2nums, corfu3nums, corfu4nums];
 
-corfu = [1, 2] collect: { | n |
+corfu = [1, 3] collect: { | n |
 	[\x, \y, \z] collect: { | d |
 		format("corfu%%", n, d)
 	}
@@ -82,7 +82,7 @@ window.addNotifier(IdeFantasy, '/corfu', { | n, id ... nums |
 	// TODO: Add project gui button to open/close this window
 	var sliders, numboxes, busses;
 	// "the notifier received sapporo from fantasy".postln;
-	id = id - 1;
+	id = [0, 0, 1][id - 1];
 	sliders = allsliders[id];
 	numboxes = allnums[id];
 	busses = allbusses[id];
