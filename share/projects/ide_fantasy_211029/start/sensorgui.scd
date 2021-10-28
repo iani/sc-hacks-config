@@ -103,10 +103,11 @@ window.addNotifier(IdeFantasy, '/athens', { | n, id ... nums |
 	// TODO: Add project gui button to open/close this window
 	var sliders, numboxes, busses;
 	// "the notifier received sapporo from fantasy".postln;
-	id = id - 1;
+	id = id + 1;
 	sliders = allsliders[id];
 	numboxes = allnums[id];
 	busses = allbusses[id];
+	postln("id: %, sliders: %, numboxes: %, busses: %", id, sliders, numboxes, busses);
 	{
 		nums do: { | val, i |
 			val = spec.unmap(val);
