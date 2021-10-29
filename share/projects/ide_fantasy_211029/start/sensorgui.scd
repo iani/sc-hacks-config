@@ -107,7 +107,7 @@ window.addNotifier(IdeFantasy, '/athens', { | n, id ... nums |
 	sliders = allsliders[id];
 	numboxes = allnums[id];
 	busses = allbusses[id];
-	postln("id: %, sliders: %, numboxes: %, busses: %", id, sliders, numboxes, busses);
+	// postln("id: %, sliders: %, numboxes: %, busses: %", id, sliders, numboxes, busses);
 	{
 		nums do: { | val, i |
 			val = spec.unmap(val);
