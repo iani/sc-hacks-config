@@ -4,3 +4,4 @@ audiofiles/*.aif
 audiofiles/*.aiff
 audiofiles/*
 *.log
+.DS_Store
