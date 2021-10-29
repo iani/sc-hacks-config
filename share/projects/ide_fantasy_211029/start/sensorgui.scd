@@ -34,7 +34,6 @@ athens2nums = { NumberBox().font_(font).maxWidth_(120) } ! 3;
 athens3nums = { NumberBox().font_(font).maxWidth_(120) } ! 3;
 athens4nums = { NumberBox().font_(font).maxWidth_(120) } ! 3;
 
-
 allsliders = [athens1sliders, athens2sliders, corfu3sliders, corfu4sliders];
 allnums = [athens1nums, athens2nums, corfu3nums, corfu4nums];
 
@@ -83,6 +82,7 @@ window.addNotifier(IdeFantasy, '/corfu', { | n, id ... nums |
 	var sliders, numboxes, busses;
 	// "the notifier received sapporo from fantasy".postln;
 	// id = [0, 0, 1][id - 1];
+	id = id - 1;
 	sliders = allsliders[id];
 	sliders = allsliders[id];
 	numboxes = allnums[id];
