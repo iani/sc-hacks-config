@@ -1,0 +1,1 @@
+\sensors.window.close;
