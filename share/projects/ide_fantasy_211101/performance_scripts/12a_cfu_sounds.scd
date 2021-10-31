@@ -4,7 +4,8 @@
 //: a useable sound w xyz control + settable buffers
 {
 	var amp, src, buf;
-	buf = \buf.kr(\hanbaiki.bufnum);
+	// buf = \buf.kr(\hanbaiki.bufnum);
+	buf = \buf.kr(\noisebirdsclick.bufnum);
 	src = PlayBuf.ar(1, buf,
 		LinLin.kr(
 			//	Lag.kr(\corfu1x.in, 1.0),
