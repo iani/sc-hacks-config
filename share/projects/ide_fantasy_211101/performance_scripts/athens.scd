@@ -1,24 +1,32 @@
-/* 14 Sep 2021 13:15
-*/
-
-//: a useable sound w xyz control + settable buffers
+// 1 Nov 2021 04:39
+//
+//: melodic_road
 {
 	var amp, src, buf;
 	buf = \buf.kr(\melodic_road.bufnum);
 	src = PlayBuf.ar(1, buf,
-		LinLin.kr(
-			//	Lag.kr(\athens1x.in, 1.0),
-			1,
-			0, 1, 0.2, 1.5
-		),
+		1,
 		1, 0, 1, 2
 	);
 	Pan2.ar(src, Lag.kr(
-		LinLin.kr(\athens1z.in, 0.46, 0.54, 0.7, -0.7),
+		LinLin.kr(\corfu1z.in, 0.46, 0.54, 0.7, -0.7),
 		5.0),
-		Lag.kr(\athens2z.in, 1.0) * 1.2)
-} +> \athens_b;
-//==================================================
+		Lag.kr(\corfu2z.in, 1.0) * 1)
+} +> \corfu_b;
+//: takunia
+{
+	var amp, src, buf;
+	buf = \buf.kr(\takunia.bufnum);
+	src = PlayBuf.ar(1, buf,
+		1,
+		1, 0, 1, 2
+	);
+	Pan2.ar(src, Lag.kr(
+		LinLin.kr(\corfu1z.in, 0.46, 0.54, 0.7, -0.7),
+		5.0),
+		Lag.kr(\corfu2z.in, 1.0) * 1)
+} +> \corfu_b;
+
 //: VARIANT USING Z FOR AMP CONTROL
 {
 	var amp, src, buf;
@@ -36,8 +44,7 @@
 {
 	var amp, src;
 	src = PlayBuf.ar(1,
-		Lag.kr(LinLin.kr(In.kr(\athens1z.index), 0, 1, 0, 10).round(1),
-			1.0),
+		Lag.kr(LinLin.kr(In.kr(\athens1z.index), 0, 1, 0, 10).round(1), 1.0),
 		0.2, 0, 1, 2
 	);
 	Pan2.ar(src, \athens2x.in - 0.5 * 2, \athens2z.in);
@@ -50,19 +57,21 @@
 	src = GrainBuf.ar(
 		numChannels: 2,
 		dur: 0.5,
-		trigger: Impulse.kr(
-			LinLin.kr(\athens1z.in, 0.2, 0.7, 5, 10)
+		trigger: // Impulse.kr(10),
+		Impulse.kr(
+			LinLin.kr(\athens2z.in, 0.45, 0.55, 1, 10)
 		),
 		sndbuf: buf,
-		rate: LinLin.kr(\athens2y.in, 0.2, 0.7, 0.5, 1.5),
-		pos: LinLin.kr(\athens2z.in, 0.2, 0.7, 0.0, 1.0),
+		rate: LinLin.kr(\athens2y.in, 0.45, 0.55, 0.15, 1.5),
+		pos: LinLin.kr(\athens1x.in, 0.45, 0.55, 0.10, 0.9),
 		interp: 2,
 		pan: 0,
-		envbufnum: -1, maxGrains: 512, mul:
-		LinLin.kr(\athens2x.in, 0.0, 0.9, 0.0, 0.1),
+		envbufnum: -1, maxGrains: 512,
+		mul: LinLin.kr(\athens1z.in, 0.47, 0.55, 0.0, 0.1),
 		add: 0
 	);
 } +> \athens_b;
+
 //==================================================
 //: BRICKWALL
 {

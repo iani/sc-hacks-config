@@ -1,17 +1,24 @@
-/* 14 Sep 2021 13:15
-*/
-
-//: a useable sound w xyz control + settable buffers
+//  1 Nov 2021 04:39
+//
+//: melodic_road
 {
 	var amp, src, buf;
-	// buf = \buf.kr(\hanbaiki.bufnum);
-	buf = \buf.kr(\noisebirdsclick.bufnum);
+	buf = \buf.kr(\melodic_road.bufnum);
 	src = PlayBuf.ar(1, buf,
-		LinLin.kr(
-			//	Lag.kr(\corfu1x.in, 1.0),
-			2,
-			0, 1, 0.2, 1.5
-		),
+		1,
+		1, 0, 1, 2
+	);
+	Pan2.ar(src, Lag.kr(
+		LinLin.kr(\corfu1z.in, 0.46, 0.54, 0.7, -0.7),
+		5.0),
+		Lag.kr(\corfu2z.in, 1.0) * 1)
+} +> \corfu_b;
+//: takunia
+{
+	var amp, src, buf;
+	buf = \buf.kr(\takunia.bufnum);
+	src = PlayBuf.ar(1, buf,
+		1,
 		1, 0, 1, 2
 	);
 	Pan2.ar(src, Lag.kr(
@@ -41,9 +48,8 @@
 {
 	var amp, src;
 	src = PlayBuf.ar(1,
-		Lag.kr(LinLin.kr(In.kr(\corfu1z.index), 0, 1, 0, 10).round(1),
-			1.0),
-		1.75, 0, 1, 2
+		Lag.kr(LinLin.kr(In.kr(\corfu1z.index), 0, 1, 0, 10).round(1), 1.0),
+		1.05, 0, 1, 2
 	);
 	Pan2.ar(src, \corfu2x.in - 0.5 * 2, \corfu2z.in);
 } +> \corfu_b;
@@ -53,20 +59,21 @@
 // contrasting with other voice
 {
 	var amp, src, buf;
-	buf = \buf.kr(\crickets.bufnum);
+	buf = \buf.kr(\melodic_road.bufnum);
 	src = GrainBuf.ar(
 		numChannels: 2,
 		dur: 0.5,
-		trigger: Impulse.kr(
-			LinLin.kr(\corfu1z.in, 0.2, 0.7, 5, 10)
+		trigger: // Impulse.kr(10),
+		Impulse.kr(
+			LinLin.kr(\corfu2z.in, 0.45, 0.55, 1, 10)
 		),
 		sndbuf: buf,
-		rate: LinLin.kr(\corfu2y.in, 0.2, 0.7, 0.5, 1.5),
-		pos: LinLin.kr(\corfu2z.in, 0.2, 0.7, 0.0, 1.0),
+		rate: LinLin.kr(\corfu2y.in, 0.45, 0.55, 0.15, 1.5),
+		pos: LinLin.kr(\corfu1x.in, 0.45, 0.55, 0.10, 0.9),
 		interp: 2,
 		pan: 0,
-		envbufnum: -1, maxGrains: 512, mul:
-		LinLin.kr(\corfu2x.in, 0.0, 0.9, 0.0, 0.1),
+		envbufnum: -1, maxGrains: 512,
+		mul: LinLin.kr(\corfu1z.in, 0.47, 0.55, 0.0, 0.1),
 		add: 0
 	);
 } +> \corfu_b;
