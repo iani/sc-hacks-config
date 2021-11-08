@@ -14,14 +14,15 @@
 		Lag.kr(\athens2z.in, 1.0) * 1)
 } +> \athens_b;
 //:
+\athens_b.stop;
 //\athens_b.set(\buf, \birdcarmanshort.bufnum);
+\athens_b.set(\buf, 'birdcarmanshort'.bufnum);
 \athens_b.set(\buf, \takunia.bufnum);
 //:
 \athens_b.set(\buf, '01kiiroi'.bufnum);
 \athens_b.set(\buf, '14pilgrims'.bufnum);
 \athens_b.set(\buf, 'bird_crickets'.bufnum);
 \athens_b.set(\buf, 'birdcarman'.bufnum);
-\athens_b.set(\buf, 'birdcarmanshort'.bufnum);
 \athens_b.set(\buf, 'cricket_ff'.bufnum);
 \athens_b.set(\buf, 'cricket_taps'.bufnum);
 \athens_b.set(\buf, 'crickets'.bufnum);
