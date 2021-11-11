@@ -45,3 +45,45 @@
 		0.0001
 	), 1) } +> \test;
 //:
+Server.default.scope;
+//:
+(
+{
+	Env([0, 1, 1, 0], [0.01, 0.98, 0.01])
+	.kr(gate: Impulse.kr(0.9))
+	* WhiteNoise.ar(0.1)
+} +> \test;
+)
+//:
+
+{ Blip.ar(Latch.ar(WhiteNoise.ar, Impulse.ar(9)) * 400 + 500, 4, 0.2) }.play;
+
+
+
+
+Env.welch.plot;
+
+
+
+
+Env.shapeNames;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
