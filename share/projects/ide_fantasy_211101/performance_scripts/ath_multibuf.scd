@@ -1,7 +1,7 @@
 //  1 Nov 2021 04:39
 // Change buffers while playing, using set.
 //
-//: ------ 1 ------
+//: ------ 1 ------ ~0:00
 // kiiroi (default buffer).
 { | buf = 0 |
 	var amp, src;
@@ -14,9 +14,9 @@
 		5.0),
 		Lag.kr(\athens2z.in, 1.0) * 1)
 } +> \athens_b;
-//: ------ 2 ------
+//: ------ 2 ------ ~0:30
 \athens_b stop: 5;
-//: ------ 3 ------
+//: ------ 3 ------ ~0:35
 // preacherman solo - then takunia - then dialog preacherman-takunia
 { | buf = 0 |
 	var amp, src;
@@ -30,9 +30,9 @@
 		5.0),
 		Lag.kr(\athens2z.in, 1.0) * 1)
 } +> \athens_b
-//: ------ 3.1 ------
+//: ------ 3.1 ------ ~3:00
 \athens_b stop: 5;
-//: ------ 4 ------
+//: ------ 4 ------ ~3:05
 // BRICKWALL with changeable buffer
 {
 	var buf, in, chain;
@@ -53,7 +53,7 @@
 	);
 	//	Pan2.ar(src, \athens1y.in - 0.5, \athens1z.in - 0.3);
 } +> \athens_b;
-//: ------ 5 ------
+//: ------ 5 ------ ~5:00
 // MAGABOVE - bufctl in left hand z
 // conrtrol seeems best on this one for dialog
 {
@@ -75,7 +75,7 @@
 	) * 3;
 	//	Pan2.ar(src, \athens1y.in - 0.5, \athens1z.in - 0.3);
 } +> \athens_b;
-//: ------ 6 ------
+//: ------ 6 ------ ~7:00
 // MAGBELOW - bufctl in left hand z
 {
 	var buf, in, chain;
@@ -95,7 +95,7 @@
 	);
 	//	Pan2.ar(src, \athens1y.in - 0.5, \athens1z.in - 0.3);
 } +> \athens_b;
-//: ------ 7 ------
+//: ------ 7 ------ ~9:00
 // BINSHIFT - with buf selection in left hand z
 {
 	var buf, in, chain;
@@ -121,7 +121,7 @@
 	);
 	//	Pan2.ar(src, \pporo1y.in - 0.5, \athens1z.in - 0.3);
 } +> \athens_b;
-//: ------ 8 ------
+//: ------ 8 ------ ~11:00
 // MAGSHIFT - with buf control in left hand z
 // MARY SHOULD PLAY WITH THE CONTRASTS OF VERY HIGH AND VERY LOW FREQUENCIES
 {
@@ -150,13 +150,13 @@
 	//	Pan2.ar(src, \pporo1y.in - 0.5, \athens1z.in - 0.3);
 } +> \athens_b;
 //==================================================
-//: ------ 9 ------
+//: ------ 9 ------ ~13:00
 \athens_b stop: 5;
 //==================================================
 // TAKUNIA! -> see corfu!
 //==================================================
 //
-//: ------ 10 ------
+//: ------ 10 ------ ~13:30
 // MAGABOVE - bufctl in left hand z
 {
 	var buf, in, chain;
@@ -178,7 +178,7 @@
 	//	Pan2.ar(src, \athens1y.in - 0.5, \athens1z.in - 0.3);
 } +> \athens_b;
 
-//: ------ 11 ------
+//: ------ 11 ------ ~15:30
 // BINSHIFT - with buf selection in left hand z
 
 {
@@ -207,7 +207,7 @@
 } +> \athens_b;
 
 
-//: ------ 12 ------
+//: ------ 12 ------ ~17:30
 // END
 
 \athens_b.stop(5);
