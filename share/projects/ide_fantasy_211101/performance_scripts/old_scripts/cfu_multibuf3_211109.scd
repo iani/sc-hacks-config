@@ -1,7 +1,7 @@
 //  1 Nov 2021 04:39
 // Change buffers while playing, using set.
-//: ------ 1 ------
-// kiiroi (default buffer).
+//: kiiroi (default buffer). use set to change buffer
+// (see snippet following this one).
 { | buf = 0 |
 	var amp, src;
 	src = PlayBuf.ar(1, buf,
@@ -13,26 +13,12 @@
 		5.0),
 		Lag.kr(\corfu2z.in, 1.0) * 1)
 } +> \corfu_b;
-//: ------ 2 ------
-\corfu_b stop: 5;
-//: ------ 3 ------
-// TAKUNIA after preacherman ! - then dialog
-{ | buf = 0 |
-	var amp, src;
-	buf = 'takunia'.bufnum;
-	src = PlayBuf.ar(1, buf,
-		1,
-		1, 0, 1, 2
-	);
-	Pan2.ar(src, Lag.kr(
-		LinLin.kr(\corfu1z.in, 0.46, 0.54, 0.7, -0.7),
-		5.0),
-		Lag.kr(\corfu2z.in, 1.0) * 1)
-} +> \corfu_b
-//: ------ 3.1 ------
-\corfu_b stop: 5;
-//: ------ 4 ------
-//Granulation with changeable buffer
+//:
+\corfu_b.stop;
+//\corfu_b.set(\buf, \birdcarmanshort.bufnum);
+\corfu_b.set(\buf, \takunia.bufnum);
+//:
+//:Granulation with changeable buffer
 { | buf = 0 |
 	var amp, src;
 	src = GrainBuf.ar(
@@ -54,8 +40,7 @@
 		// add: 0
 	);
 } +> \corfu_b;
-//: ------ 5 ------
-// BRICKWALL with changeable buffer
+//: BRICKWALL with changeable buffer
 {
 	var buf, in, chain;
 	buf = \buf.kr(\melodic_road.bufnum);
@@ -75,14 +60,14 @@
 	);
 	//	Pan2.ar(src, \corfu1y.in - 0.5, \corfu1z.in - 0.3);
 } +> \corfu_b;
-//: ------ 6 ------
-// MAGABOVE - bufctl in left hand z
+//==================================================
+//: MAGABOVE - bufctl in left hand z
 // conrtrol seeems best on this one for dialog
 {
 	var buf, in, chain;
 	buf = \buf.kr(\melodic_road.bufnum);
 	in = PlayBuf.ar(1, // buf,
-		Lag.kr(LinLin.kr(In.kr(\corfu1x.index), 0, 1, 0, 10).round(1), 1.0),
+		Lag.kr(LinLin.kr(In.kr(\corfu1z.index), 0, 1, 0, 10).round(1), 1.0),
 		// Lag.kr(\corfu1y.in, 0.5),
 		1,
 		1, 0, 1, 2
@@ -97,19 +82,18 @@
 	) * 3;
 	//	Pan2.ar(src, \corfu1y.in - 0.5, \corfu1z.in - 0.3);
 } +> \corfu_b;
-//: ------ 7 ------
-// MAGBELOW - bufctl in left hand z
+//: MAGBELOW - bufctl in left hand z
 {
 	var buf, in, chain;
 	buf = \buf.kr(\melodic_road.bufnum);
 	in = PlayBuf.ar(1, // buf,
-		Lag.kr(LinLin.kr(In.kr(\corfu1x.index), 0, 1, 0, 10).round(1), 1.0),
+		Lag.kr(LinLin.kr(In.kr(\corfu1z.index), 0, 1, 0, 10).round(1), 1.0),
 		1,
 		1, 0, 1, 2
 	);
     chain = FFT(LocalBuf(2048), in);
     chain = PV_MagBelow(chain,
-		Lag.kr(LinLin.kr(\corfu1z.in, 0.42, 0.59, 0, 30), 0.5)
+		Lag.kr(LinLin.kr(\corfu1z.in, 0, 1, 0, 20), 0.5)
 	);
     Pan2.ar(IFFT(chain),
 		Lag.kr(LinLin.kr(\corfu2y.in, 0, 1, -1.0, 1.0), 1.0),
@@ -117,8 +101,8 @@
 	);
 	//	Pan2.ar(src, \corfu1y.in - 0.5, \corfu1z.in - 0.3);
 } +> \corfu_b;
-//: ------ 8 ------
-// BINSHIFT - with buf selection in left hand z
+//==================================================
+//: BINSHIFT - with buf selection in left hand z
 {
 	var buf, in, chain;
 	buf = \buf.kr(\melodic_road.bufnum);
@@ -144,48 +128,7 @@
 	//	Pan2.ar(src, \pporo1y.in - 0.5, \corfu1z.in - 0.3);
 } +> \corfu_b;
 
-//==================================================
-//: ------ 9 ------
-\corfu_b stop: 5;
-
-//==================================================
-//: TAKUNIA!
-{ | buf = 0 |
-	var amp, src;
-	buf = 'takunia'.bufnum;
-	src = PlayBuf.ar(1, buf,
-		1,
-		1, 0, 1, 2
-	);
-	Pan2.ar(src, Lag.kr(
-		LinLin.kr(\corfu1z.in, 0.46, 0.54, 0.7, -0.7),
-		5.0),
-		Lag.kr(\corfu2z.in, 1.0) * 1)
-} +> \corfu_b
-
-//: ------ 10 -------
-// MAGBELOW - bufctl in left hand z
-{
-	var buf, in, chain;
-	buf = \buf.kr(\melodic_road.bufnum);
-	in = PlayBuf.ar(1, // buf,
-		Lag.kr(LinLin.kr(In.kr(\athens1x.index), 0, 1, 0, 10).round(1), 1.0),
-		1,
-		1, 0, 1, 2
-	);
-    chain = FFT(LocalBuf(2048), in);
-    chain = PV_MagBelow(chain,
-		Lag.kr(LinLin.kr(\athens1z.in, 0.42, 0.59, 0, 30), 0.5)
-	);
-    Pan2.ar(IFFT(chain),
-		Lag.kr(LinLin.kr(\athens2y.in, 0, 1, -1.0, 1.0), 1.0),
-		Lag.kr(LinLin.kr(\athens2z.in, 0, 1, 0.0, 1.0), 1.0),
-	);
-	//	Pan2.ar(src, \athens1y.in - 0.5, \athens1z.in - 0.3);
-} +> \athens_b;
-
-//: ------ 11 ------
-// MAGSHIFT - with buf control in left hand z
+//: MAGSHIFT - with buf control in left hand z
 // MARY SHOULD PLAY WITH THE CONTRASTS OF VERY HIGH AND VERY LOW FREQUENCIES
 {
 	var buf, in, chain;
@@ -212,10 +155,28 @@
 	);
 	//	Pan2.ar(src, \pporo1y.in - 0.5, \corfu1z.in - 0.3);
 } +> \corfu_b;
-
-//: ------ 12 ------
-// END
-
+//==================================================
+//: MAGBELOW - bufctl in left hand z
+{
+	var buf, in, chain;
+	buf = \buf.kr(\melodic_road.bufnum);
+	in = PlayBuf.ar(1, // buf,
+		Lag.kr(LinLin.kr(In.kr(\corfu1z.index), 0, 1, 0, 10).round(1), 1.0),
+		1,
+		1, 0, 1, 2
+	);
+    chain = FFT(LocalBuf(2048), in);
+    chain = PV_MagBelow(chain,
+		Lag.kr(LinLin.kr(\corfu1z.in, 0, 1, 0, 20), 0.5)
+	);
+    Pan2.ar(IFFT(chain),
+		Lag.kr(LinLin.kr(\corfu2y.in, 0, 1, -1.0, 1.0), 1.0),
+		Lag.kr(LinLin.kr(\corfu2z.in, 0, 1, 0.0, 1.0), 1.0),
+	);
+	//	Pan2.ar(src, \corfu1y.in - 0.5, \corfu1z.in - 0.3);
+} +> \corfu_b;
+//==================================================
+//: END
 \corfu_b.stop(5);
 \corfu_b.stop(15);
 \corfu_b.stop(20);
